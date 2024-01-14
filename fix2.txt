@@ -1,0 +1,37 @@
+git init
+New-Item -ItemType file -Name README.md
+echo "duck" >> README.md
+echo "moose" >> README.md
+echo "cat" >> README.md
+git add .
+git commit -m "Initial commit"
+git checkout -b feature1
+git add README.md
+git commit -m "Add god and change moose to mouse"
+git checkout main
+git add README.md
+git commit -m "Change moose to mahmut"
+git merge feature1
+git add README.md
+git commit -m "Merge feature1 with main"
+git status
+git tag extinct
+git reset --hard HEAD~1
+git branch feature2
+git add README.md
+git commit -m "Capital first letter on all animals"
+git checkout feature2
+echo > fix1.txt
+git add fix1.txt
+git commit -m "Add fix1.txt"
+echo > fix2.txt
+git add fix2.txt
+git commit -m "Add fix2.txt"
+git checkout main
+(steg 14 cherrypick - högerklick på commit av fix2.txt i intellij)
+
+git remote add origin https://github.com/ErikaSignal/gitlabb1.git
+git push --set-upstream origin --all
+git add fix2.txt
+git commit -m "Update fix2.txt with github repository commands"
+git push -u origin main
