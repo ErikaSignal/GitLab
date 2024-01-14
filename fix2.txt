@@ -35,3 +35,15 @@ git push --set-upstream origin --all
 git add fix2.txt
 git commit -m "Update fix2.txt with github repository commands"
 git push -u origin main
+
+git tag -a v1.0 -m "Version 1.0"
+git push origin v1.0
+git rebase -i HEAD~2
+git add .gitignore
+git commit -m "Add .gitignore"
+
+git checkout -b feature3
+git add fix2.txt
+git commit -m "Update fix2.txt with commands for 18,19 and 20"
+git checkout main
+git merge --no-ff feature3 -m "Merge feature3 into main"
